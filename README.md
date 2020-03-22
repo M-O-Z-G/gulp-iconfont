@@ -2,7 +2,7 @@
 
 > Create SVG/TTF/EOT/WOFF/WOFF2 fonts from several SVG icons with [Gulp](http://gulpjs.com/).
 
-[![NPM version](https://badge.fury.io/js/%40m-o-z-g%2Fgulp-iconfont.svg)](https://npmjs.org/package/@m-o-z-g/gulp-iconfont) [![Dependency Status](https://david-dm.org/m-o-z-g/gulp-iconfont.svg)](https://david-dm.org/m-o-z-g/gulp-iconfont) [![devDependency Status](https://david-dm.org/m-o-z-g/gulp-iconfont/dev-status.svg)](https://david-dm.org/m-o-z-g/gulp-iconfont#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/github/M-O-Z-G/gulp-iconfont/badge.svg?branch=master)](https://coveralls.io/github/M-O-Z-G/gulp-iconfont?branch=master)
+[![NPM version](https://badge.fury.io/js/%40m-o-z-g%2Fgulp-iconfont.svg)](https://npmjs.org/package/@m-o-z-g/gulp-iconfont) [![Build status](https://secure.travis-ci.org/M-O-Z-G/gulp-iconfont.png)](https://travis-ci.org/M-O-Z-G/gulp-iconfont) [![Dependency Status](https://david-dm.org/m-o-z-g/gulp-iconfont.svg)](https://david-dm.org/m-o-z-g/gulp-iconfont) [![devDependency Status](https://david-dm.org/m-o-z-g/gulp-iconfont/dev-status.svg)](https://david-dm.org/m-o-z-g/gulp-iconfont#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/github/M-O-Z-G/gulp-iconfont/badge.svg?branch=master)](https://coveralls.io/github/M-O-Z-G/gulp-iconfont?branch=master)
 
 You can test this library with the
  [frontend generator](http://nfroidure.github.io/svgiconfont/).
