@@ -1,7 +1,8 @@
 # gulp-iconfont
+
 > Create SVG/TTF/EOT/WOFF/WOFF2 fonts from several SVG icons with [Gulp](http://gulpjs.com/).
 
-[![NPM version](https://badge.fury.io/js/gulp-iconfont.svg)](https://npmjs.org/package/gulp-iconfont) [![Build status](https://secure.travis-ci.org/nfroidure/gulp-iconfont.svg)](https://travis-ci.org/nfroidure/gulp-iconfont) [![Dependency Status](https://david-dm.org/nfroidure/gulp-iconfont.svg)](https://david-dm.org/nfroidure/gulp-iconfont) [![devDependency Status](https://david-dm.org/nfroidure/gulp-iconfont/dev-status.svg)](https://david-dm.org/nfroidure/gulp-iconfont#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/nfroidure/gulp-iconfont/badge.svg?branch=master)](https://coveralls.io/r/nfroidure/gulp-iconfont?branch=master) [![Code Climate](https://codeclimate.com/github/nfroidure/gulp-iconfont.svg)](https://codeclimate.com/github/nfroidure/gulp-iconfont)
+[![NPM version](https://badge.fury.io/js/%40m-o-z-g%2Fgulp-iconfont.svg)](https://npmjs.org/package/@m-o-z-g/gulp-iconfont) [![Dependency Status](https://david-dm.org/m-o-z-g/gulp-iconfont.svg)](https://david-dm.org/m-o-z-g/gulp-iconfont) [![devDependency Status](https://david-dm.org/m-o-z-g/gulp-iconfont/dev-status.svg)](https://david-dm.org/m-o-z-g/gulp-iconfont#info=devDependencies) [![Coverage Status](https://coveralls.io/repos/github/M-O-Z-G/gulp-iconfont/badge.svg?branch=master)](https://coveralls.io/github/M-O-Z-G/gulp-iconfont?branch=master)
 
 You can test this library with the
  [frontend generator](http://nfroidure.github.io/svgiconfont/).
@@ -21,14 +22,14 @@ You can test this library with the
 First, install `gulp-iconfont` as a development dependency:
 
 ```shell
-npm install --save-dev gulp-iconfont
+npm install --only=dev @m-o-z-g/gulp-iconfont
 ```
 
 Then, add it to your `gulpfile.js`:
 
 ```javascript
-var iconfont = require('gulp-iconfont');
-var runTimestamp = Math.round(Date.now()/1000);
+const iconfont = require('@m-o-z-g/gulp-iconfont');
+const runTimestamp = Math.round(Date.now()/1000);
 
 gulp.task('Iconfont', function(){
   return gulp.src(['assets/icons/*.svg'])
@@ -47,7 +48,7 @@ gulp.task('Iconfont', function(){
 ```
 
 `gulp-iconfont` bundles several plugins to bring a simpler API
- (`gulp-svgicons2svgfont`, `gulp-svg2tff`, `gulp-ttf2eot`, `gulp-ttf2woff`)
+ (`gulp-svgicons2svgfont`, `@m-o-z-g/gulp-svg2tff`, `gulp-ttf2eot`, `gulp-ttf2woff`)
  for more flexibility, feel free to use them separately.
 
  **If some font glyphs aren't converted properly** you should add the
@@ -67,13 +68,13 @@ It's also easy to make a CSS template by yourself. Like
  [such a template](https://github.com/cognitom/symbols-for-sketch/blob/master/templates/fontawesome-style.css). The template is outdated, **change** every occurrence of `glyph.codepoint.toString(16).toUpperCase()` to `glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase()`, otherwise it will not work.
 
 ```javascript
-var async = require('async');
-var gulp = require('gulp');
-var iconfont = require('gulp-iconfont');
-var consolidate = require('gulp-consolidate');
+const async = require('async'),
+      gulp = require('gulp'),
+      iconfont = require('gulp-iconfont'),
+      consolidate = require('gulp-consolidate');
 
 gulp.task('Iconfont', function(done){
-  var iconStream = gulp.src(['assets/icons/*.svg'])
+  let iconStream = gulp.src(['assets/icons/*.svg'])
     .pipe(iconfont({ fontName: 'myfont' }));
 
   async.parallel([
@@ -138,6 +139,7 @@ If the value is a string, it is taken to be the path to the `ttfautohint` binary
  Otherwise, `ttfautohint` is searched in $PATH.
 
 #### options.*
+
 The [svgicons2svgfont](https://github.com/nfroidure/svgicons2svgfont#svgicons2svgfontoptions)
  are available:
 * options.fontName (required)
@@ -156,7 +158,7 @@ So are the [gulp-svgicons2svgfont](https://github.com/nfroidure/gulp-svgicons2sv
 * options.startUnicode
 * options.prependUnicode
 
-And the [gulp-svg2ttf](https://github.com/nfroidure/gulp-svg2ttf#svg2ttfoptions):
+And the [@m-o-z-g/gulp-svg2ttf](https://github.com/m-o-z-g/gulp-svg2ttf#svg2ttfoptions):
 * options.timestamp
 
 ## Preparing SVG's
@@ -206,6 +208,3 @@ Here is a sample repo "[Symbols for Sketch](https://github.com/cognitom/symbols-
 ## Contributing
 Feel free to push your code if you agree with publishing under the MIT license.
 
-## Stats
-[![NPM](https://nodei.co/npm/gulp-iconfont.png?downloads=true&stars=true)](https://nodei.co/npm/gulp-iconfont/)
-[![NPM](https://nodei.co/npm-dl/gulp-iconfont.png)](https://nodei.co/npm/gulp-iconfont/)

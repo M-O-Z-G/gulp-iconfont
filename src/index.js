@@ -4,7 +4,7 @@ const multipipe = require('multipipe');
 const svgicons2svgfont = require('gulp-svgicons2svgfont');
 const filter = require('streamfilter');
 const spawn = require('gulp-spawn');
-const svg2ttf = require('gulp-svg2ttf');
+const svg2ttf = require('@m-o-z-g/gulp-svg2ttf');
 
 function gulpFontIcon(options) {
   options = options || {};

@@ -1,5 +1,5 @@
 {
-  "name": "gulp-iconfont",
+  "name": "@m-o-z-g/gulp-iconfont",
   "description": "Create icon fonts from several SVG icons",
   "version": "10.0.3",
   "homepage": "https://github.com/nfroidure/gulp-iconfont",
@@ -7,9 +7,12 @@
     "name": "Nicolas Froidure",
     "url": "http://www.insertafter.com/blog.html"
   },
+  "contributors": [
+    "Aleksandr Dikov <alexandermozgdikov+github@gmail.com> (https://mozg-studio.org)"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/nfroidure/gulp-iconfont.git"
+    "url": "git://github.com/M-O-Z-G/gulp-iconfont.git"
   },
   "bugs": {
     "url": "https://github.com/nfroidure/gulp-iconfont/issues"
@@ -36,7 +39,7 @@
   ],
   "dependencies": {
     "gulp-spawn": "^0.4.4",
-    "gulp-svg2ttf": "^2.0.0",
+    "@m-o-z-g/gulp-svg2ttf": "^2.0.1",
     "gulp-svgicons2svgfont": "^5.0.1",
     "gulp-ttf2eot": "^1.1.1",
     "gulp-ttf2woff": "^1.1.0",
@@ -54,5 +57,8 @@
     "mocha-lcov-reporter": "^1.0.0",
     "neatequal": "^1.0.0",
     "streamtest": "^1.2.4"
+  },
+  "directories": {
+    "test": "tests"
   }
 }
